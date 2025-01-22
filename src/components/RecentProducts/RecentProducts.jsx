@@ -28,7 +28,7 @@ export default function RecentProducts() {
         toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error("An error occurred while adding the product to the cart.");
+      toast.error("Please Login to add the product to the cart.");
       console.error(error);
     } finally {
       setLoading(false);

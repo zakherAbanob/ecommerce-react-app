@@ -28,7 +28,7 @@ export default function CategorySlider() {
           <h2>Shop Popular Categories</h2>
           <swiper-container
             loop={true}
-            slides-per-view={6}
+            slides-per-view={4}
             space-between="10"
             autoplay="true"
             autoplay-delay="2000" // Delay of 2 seconds between slides

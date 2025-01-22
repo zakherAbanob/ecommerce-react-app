@@ -18,20 +18,33 @@ export default function Navbar() {
 
           {/* UL LOGO && HOME */}
           <ul className="flex gap-5 items-center">
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `relative before:content-[''] before:absolute before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:transition-all before:duration-300 before:left-0 before:-bottom-1 ${
+                    isActive ? "before:w-full font-semibold" : ""
+                  }`
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  ` relative before:content-[''] before:absolute before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:transition-all before:duration-300 before:left-0 before:-bottom-1 ${
+                    isActive ? "before:w-full font-semibold" : ""
+                  }`
+                }
+                to="/Categories"
+              >
+                Categories
+              </NavLink>
+            </li>
+
             {token && (
               <>
-                <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      `relative before:content-[''] before:absolute before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:transition-all before:duration-300 before:left-0 before:-bottom-1 ${
-                        isActive ? "before:w-full font-semibold" : ""
-                      }`
-                    }
-                    to="/"
-                  >
-                    Home
-                  </NavLink>
-                </li>
                 <li>
                   <NavLink
                     className={({ isActive }) =>
@@ -44,18 +57,7 @@ export default function Navbar() {
                     Products
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      ` relative before:content-[''] before:absolute before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:transition-all before:duration-300 before:left-0 before:-bottom-1 ${
-                        isActive ? "before:w-full font-semibold" : ""
-                      }`
-                    }
-                    to="/Categories"
-                  >
-                    Categories
-                  </NavLink>
-                </li>
+
                 <li>
                   <NavLink
                     className={({ isActive }) =>

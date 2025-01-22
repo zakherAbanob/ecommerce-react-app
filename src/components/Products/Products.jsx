@@ -69,12 +69,16 @@ export default function Products() {
 
   return (
     <>
-      <div className="row">
+      <div className="py-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {data?.data.data.map((product) => (
-          <div key={product.id} className="w-1/6 px-2">
-            <div className="product py-4 shadow-md">
+          <div key={product.id} className="shadow-md">
+            <div className="product py-4">
               <Link to={`/ProductDetails/${product.id}`}>
-                <img className="w-full" src={product.imageCover} />
+                <img
+                  className="w-full"
+                  src={product.imageCover}
+                  alt={product.title}
+                />
                 <span className="block font-light text-green-800">
                   {product.category.name}
                 </span>
@@ -90,10 +94,8 @@ export default function Products() {
                 </div>
               </Link>
               <button
-                // onClick=> call function addProduct(product.id)
-                // addProduct(product.id) => call addProductToCart(product.id) from CartContext
                 onClick={() => addProduct(product.id)}
-                className="btn bg-primary"
+                className="btn bg-primary w-full"
               >
                 {currentProductID === product.id && loading ? (
                   <i className="fas fa-spinner fa-spin"></i>
