@@ -1,4 +1,22 @@
-# React + Vite
+# FreshCart
+
+## Description
+This is an e-commerce application built using React and Vite.
+
+## Features
+- User authentication
+- Dynamic API
+- Add products to cart
+- Responsive design
+
+
+## How to Run
+1. Clone the repository:
+
+**Check out the live version here: https://zakherabanob.github.io/ecommerce-react-app/
+
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
